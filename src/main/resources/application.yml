@@ -1,0 +1,27 @@
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    root: "warn"
+    org.springframework.web: "debug"
+    com.springcoding: "debug"
+
+spring:
+  application:
+    name: spring-kafka-demo
+
+spring-kafka-demo:
+  kafka:
+    bootstrap-servers: http://localhost:9092
+    topics:
+      package-tracking:
+        name: ENV.PACKAGE.TRACKING.PUBLISH
+        group-id : GROUP_ENV_SPRING_KAFKA_DEMO_CONSUME_PACKAGE_TRACKING_PUBLISH
+        id: ID_ENV_SPRING_KAFKA_DEMO_CONSUME_PACKAGE_TRACKING_PUBLISH
