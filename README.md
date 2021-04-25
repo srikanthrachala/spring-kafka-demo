@@ -8,7 +8,7 @@ $ brew services start kafka
 $ brew services list
 ```
 ###  Build and Run 
-- Build the application and run the application in IDE or gradle commands
+- Build and Run the application in IDE or use gradle commands
 - Publish message to Kafka topic using below curl or postman tool
 ```sh
 curl --location --request POST 'localhost:8081/kafka/topics/ENV.PACKAGE.TRACKING.PUBLISH/messages' \
